@@ -1,0 +1,31 @@
+[package]
+name = "sleepvoice"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# Configuração da biblioteca
+[lib]
+name = "sleepvoice_lib"
+crate-type = ["cdylib", "rlib"]  # Removi "staticlib" para evitar conflitos
+
+# Dependências de build
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+# Dependências principais
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+vosk = "0.3.1"
+cpal = "0.13"
+vosk-sys = "0.2.0"
+some_crate = "0.2.1"
+
+
+# Configuração do linker
+[build]
+rustflags = ["-L", "./lib"]

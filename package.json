@@ -1,0 +1,31 @@
+{
+  "name": "sleepvoice",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri-dev": "copy .\\src-tauri\\lib\\libvosk.lib .\\src-tauri\\target\\debug\\ && tauri dev",
+    "tauri-build": "copy .\\src-tauri\\lib\\libvosk.lib .\\src-tauri\\target\\release\\ && tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2",
+    "cargo": "^0.8.0",
+    "debug": "^4.4.0",
+    "git": "^0.1.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
+  }
+}
